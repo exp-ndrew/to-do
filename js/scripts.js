@@ -18,7 +18,7 @@ $(document).ready (function() {
             $("#current-tasks").text("");
             currentList = list
             currentList.tasks.forEach(function(task) {
-            $("#current-tasks").append('<li>' + task + '</li>');
+            $("#current-tasks").append('<li>' + '<input type="checkbox" >' + task + '</li>');
             });
         });
     });
@@ -26,7 +26,7 @@ $(document).ready (function() {
     $("form#task-form").submit(function(event) {
         event.preventDefault();
         var task = $("input#task-input").val();
-        $("#current-tasks").append('<li>' + task + '</li>');
+        $("#current-tasks").append('<li>' + '<input type="checkbox">' + task + '</li>');
         currentList.tasks.push(task);
         $("input#task-input").val("");
         });
