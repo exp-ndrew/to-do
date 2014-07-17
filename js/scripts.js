@@ -1,9 +1,10 @@
 $(document).ready (function() {
 
-    event.preventDefault();
+
     var currentList;
 
-    $("#list-input-button").click(function() {
+    $("form#list-form").submit(function(event) {
+        event.preventDefault();
         listInput = $("input#list-input").val();
         var list = {name: listInput, tasks: []}
         $(".list-of-lists").append('<li class="list-item">' + list.name + '</li>');
@@ -22,7 +23,8 @@ $(document).ready (function() {
         });
     });
 
-    $("#task-input-button").click(function() {
+    $("form#task-form").submit(function(event) {
+        event.preventDefault();
         var task = $("input#task-input").val();
         $("#current-tasks").append('<li>' + task + '</li>');
         currentList.tasks.push(task);
