@@ -1,0 +1,20 @@
+.task-input {
+  display: none;
+}
+
+/*ul {
+  list-style-type: none;
+}*/
+
+li.list-item {
+  cursor: pointer;
+  color: #0088cc;
+}
+
+li.list-item:hover {
+  text-decoration: underline;
+}
+
+ul.list-of-lists {
+  list-style-type: none;
+}
